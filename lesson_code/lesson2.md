@@ -37,7 +37,7 @@ spark = SparkSession.builder.config(conf=conf).getOrCreate()
 print("Spark Running")
 
 ## LOAD A CSV INTO AN SQL VIEW
-csv_df = spark.read.format("csv").option("header", "true").load("../datasets/df_open_2023.csv")
+csv_df = spark.read.format("csv").option("header", "true").load("/home/docker/datasets/df_open_2023.csv")
 csv_df.createOrReplaceTempView("csv_open_2023")
 
 ## CREATE AN ICEBERG TABLE FROM THE SQL VIEW
