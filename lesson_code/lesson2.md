@@ -1,6 +1,5 @@
 ```py
 import pyspark
-import pyspark
 from pyspark.sql import SparkSession
 import os
 
